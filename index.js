@@ -20,6 +20,7 @@ function launchServer() {
       .use(cors()) //permite piticiones de todas las direcciones
       .use(morgan("dev")) //nos muestra las peticiones en consola
       .use(express.json()) // permite leer formato json en el body
+      .use("/api", require("./api/routers/index.js"))
       .listen(process.env.PORT, () =>
        console.log(`Server listening on port ${process.env.PORT}`)
       ) //server listening requests
