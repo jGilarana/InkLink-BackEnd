@@ -12,10 +12,10 @@ const Message = sequelize.define('message', {
         allowNull: false
     },
     content : {
-        type: DataTypes.STRING(255),
+        type: DataTypes.STRING(1000),
         allowNull: false
     }
 })
 
 
-module.exports = Message
+module.exports = Message 
